@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url:  jdbc:mysql://127.0.0.1:3306/lottery?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  redis:
+    host: 192.168.1.213
+    port: 6379
+    password:
+    database: 0
+    timeout: 1000
+    jedis:
+      pool:
+        max-active: 8000
+        max-wait: 5000
+        max-idle: 500
+
+redisson:
+  address: redis://192.168.1.213:6379
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.iwhalecloud.lottery.pojo
